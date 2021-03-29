@@ -6,7 +6,7 @@
 /*   By: hyunlee <hyunlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 22:21:33 by hyunlee           #+#    #+#             */
-/*   Updated: 2021/03/30 00:02:56 by hyunlee          ###   ########.fr       */
+/*   Updated: 2021/03/30 00:20:16 by hyunlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@
 int main()
 {
 	// hello();
-	printf("%d\n", ft_strlen("hello"));
+	printf("%zu\n", ft_strlen("hello"));
 }

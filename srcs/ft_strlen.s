@@ -6,7 +6,7 @@ _ft_strlen:
 	jmp	loop
 
 loop:
-	cmp	rdi, 0
+	cmp	[rdi], 0
 	je	end
 	inc	rax
 	inc rdi
