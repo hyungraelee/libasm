@@ -6,11 +6,11 @@ _ft_strlen:
 	jmp	loop
 
 loop:
-	cmp	[rdi], 0
+	cmp	Byte [rdi], 0
 	je	end
 	inc	rax
-	inc rdi
-	jmp loop
+	inc	rdi
+	jmp	loop
 
 end:
 	ret
