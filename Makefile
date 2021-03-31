@@ -12,20 +12,19 @@ SRCS =	$(wildcard $(SRCS_DIR)/*.s)
 vpath %.s $(SRCS_DIR)
 OBJS = $(addprefix $(OBJS_DIR)/, $(notdir $(SRCS:.s=.o)))
 
-
 all : $(NAME)
 
 $(NAME) : $(OBJS)
 	@$(AR) $(NAME) $^
 
-# $(OBJS_DIR)/%.o : $(SRCS_DIR)/%.s
-$(OBJS_DIR)/%.o : %.s
-	@mkdir -p $(OBJS_DIR)
+$(OBJS_DIR)/%.o : %.s | $(OBJS_DIR)
 	@$(NASM) -o $@ $^
+
+$(OBJS_DIR) :
+	@mkdir -p $(OBJS_DIR)
 
 test : re
 	@$(CC) $(CFALGS) test.c -L. -lasm -I$(INC_DIR) -o test
-	@echo "\033[1;5;92m"
 	@./test
 
 clean :

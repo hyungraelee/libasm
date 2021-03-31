@@ -3,6 +3,8 @@ section	.text
 
 _ft_strcmp:
 	mov	rax, -1
+	xor rbx, rbx
+	xor rcx, rcx
 	jmp	loop
 
 loop:
@@ -13,15 +15,13 @@ loop:
 	mov	cl, Byte[rsi + rax]
 	cmp	bl, cl
 	je	loop
-	sub	bl, cl
-	mov	al, bl
+	sub rbx, rcx
+	mov rax, rbx
 	ret
 
 chks2:
 	cmp	Byte[rsi + rax], 0
 	je	end
-	xor rbx, rbx
-	xor rcx, rcx
 	mov	bl, Byte[rdi + rax]
 	mov	cl, Byte[rsi + rax]
 	sub rbx, rcx
