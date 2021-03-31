@@ -7,25 +7,25 @@ _ft_strcmp:
 
 loop:
 	inc	rax
-	cmp	Byte [rdi + rax], 0
+	cmp	Byte[rdi + rax], 0
 	je	chks2
-	mov	rbx, [rdi + rax]
-	mov	rcx, [rsi + rax]
-	cmp	rbx, rcx
+	mov	bl, Byte[rdi + rax]
+	mov	cl, Byte[rsi + rax]
+	cmp	bl, cl
 	je	loop
-	mov	rbx, [rdi + rax]
-	mov	rcx, [rsi + rax]
-	sub rbx, rcx
-	mov	rax, rbx
+	sub	bl, cl
+	mov	al, bl
 	ret
 
 chks2:
-	cmp	Byte [rsi + rax], 0
+	cmp	Byte[rsi + rax], 0
 	je	end
-	mov	rbx, [rdi + rax]
-	mov	rcx, [rsi + rax]
+	xor rbx, rbx
+	xor rcx, rcx
+	mov	bl, Byte[rdi + rax]
+	mov	cl, Byte[rsi + rax]
 	sub rbx, rcx
-	mov	rax, rbx
+	mov rax, rbx
 	ret
 
 end:

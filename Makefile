@@ -6,6 +6,8 @@ INC_DIR = ./inc
 NASM = nasm -f macho64
 AR = ar rc
 RM = rm -f
+CC = gcc
+CFALGS = -Wall -Wextra -Werror
 SRCS =	$(wildcard $(SRCS_DIR)/*.s)
 vpath %.s $(SRCS_DIR)
 OBJS = $(addprefix $(OBJS_DIR)/, $(notdir $(SRCS:.s=.o)))
@@ -22,7 +24,7 @@ $(OBJS_DIR)/%.o : %.s
 	@$(NASM) -o $@ $^
 
 test : re
-	@gcc test.c -L. -lasm -I$(INC_DIR) -o test
+	@$(CC) $(CFALGS) test.c -L. -lasm -I$(INC_DIR) -o test
 	@echo "\033[1;5;92m"
 	@./test
 

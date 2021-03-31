@@ -6,7 +6,7 @@
 /*   By: hyunlee <hyunlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 22:21:33 by hyunlee           #+#    #+#             */
-/*   Updated: 2021/03/30 18:36:04 by hyunlee          ###   ########.fr       */
+/*   Updated: 2021/03/31 20:23:55 by hyunlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,18 @@ void	check_ft_strlen(void)
 	ft_strlen("12345678901234567890abcdefghijklmnopqrstuvwxyz"));
 }
 
+void	check_ft_strcpy(void)
+{
+	char	dst1[] = "abcde";
+	printf("%s\n", ft_strcpy(dst1, "ABCDEF"));
+}
+
 int main()
 {
 	check_ft_strlen();
 	printf("-------------------------------------\n");
-	printf("%d\n", ft_strcmp("c", "d"));
+	printf("%d\n", ft_strcmp("c", "a"));
 	printf("%d\n", ft_strcmp("abc", "abcd"));
+	printf("-------------------------------------\n");
+	check_ft_strcpy();
 }
