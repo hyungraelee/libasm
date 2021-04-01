@@ -6,7 +6,7 @@
 /*   By: hyunlee <hyunlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 22:13:38 by hyunlee           #+#    #+#             */
-/*   Updated: 2021/04/01 00:20:27 by hyunlee          ###   ########.fr       */
+/*   Updated: 2021/04/01 20:28:55 by hyunlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,11 @@
 # include <errno.h>
 
 # define C_YLW "\e[0;33m"
-# define C_RESET "\e[0m"
 # define C_RED "\033[31m"
+# define B_RED "\033[1;5;31m"
+# define B_YLW "\e[1;5;33m"
 # define B_GREEN "\033[1;5;92m"
+# define C_RESET "\e[0m"
 
 size_t	ft_strlen(const char *s);
 char *	ft_strcpy(char * dst, const char * src);
