@@ -6,7 +6,7 @@
 /*   By: hyunlee <hyunlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 22:13:38 by hyunlee           #+#    #+#             */
-/*   Updated: 2021/04/01 20:28:55 by hyunlee          ###   ########.fr       */
+/*   Updated: 2021/04/03 02:04:35 by hyunlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@
 # include <string.h>
 # include <errno.h>
 
+# define C_LIME "\e[1;38;2;133;188;94m"
+# define C_PURPLE "\e[1;38;2;189;147;249m"
+# define C_LEMON "\e[1;38;2;235;247;165m"
+# define C_P "\e[1;38;2;255;192;91m"
+# define C_O "\e[1;38;2;75;221;241m"
+# define C_I "\e[1;38;2;244;66;236m"
 # define C_YLW "\e[0;33m"
 # define C_RED "\033[31m"
 # define B_RED "\033[1;5;31m"
@@ -30,9 +36,8 @@
 size_t	ft_strlen(const char *s);
 char *	ft_strcpy(char * dst, const char * src);
 int		ft_strcmp(const char *s1, const char *s2);
+char *	ft_strdup(const char *s1);
 ssize_t	ft_write(int fd, const void *buf, size_t nbyte);
 ssize_t	ft_read(int fd, void *buf, size_t nbyte);
-char *	ft_strdup(const char *s1);
-
 
 #endif
