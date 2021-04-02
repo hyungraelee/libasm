@@ -6,12 +6,11 @@
 /*   By: hyunlee <hyunlee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 22:21:33 by hyunlee           #+#    #+#             */
-/*   Updated: 2021/04/03 02:12:14 by hyunlee          ###   ########.fr       */
+/*   Updated: 2021/04/03 02:16:24 by hyunlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libasm.h"
-#include <stdio.h>
 
 void	check_ft_strlen(void)
 {
@@ -113,5 +112,5 @@ int main()
 	check_ft_strcmp();
 	check_ft_strdup();
 	check_ft_write();
-	// check_ft_read();
+	check_ft_read();
 }
